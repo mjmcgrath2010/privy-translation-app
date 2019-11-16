@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "async-waterfall": "^0.1.5",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "codemirror": "^5.49.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mmcgrath-prettier-config": "^1.0.0",
+    "path": "^0.12.7",
     "react": "^16.12.0",
+    "react-codemirror": "^1.0.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-flags-select": "^1.1.10",
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1",
+    "translate-json-object": "^2.3.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "start:dev": "react-scripts start",
+    "heroku-postbuild": "yarn && yarn run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -16,6 +30,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:8080",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -27,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": "mmcgrath-prettier-config",
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
